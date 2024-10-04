@@ -3,6 +3,13 @@ import { BrowserRouter, Route, Routes,Link} from 'react-router-dom'
 import { Home } from './Components/Home'
 import { About } from './Components/About'
 import { useState } from 'react'
+import geek from '../public/Certificates/geek.png'
+import geekjs from '../public/Certificates/geekjs.png'
+import guvifull from '../public/Certificates/guvifull.png'
+import guvi from '../public/Certificates/guvi.png'
+import learntube from '../public/Certificates/learntube.jpeg'
+import python from '../public/Certificates/python.png'
+import logo from '../public/images/logo2.jpeg'
 import moon from '../public/images/moon.png'
 import sun from '../public/images/sun.png'
 import trans3 from '../public/images/trans3.jpeg'
@@ -47,7 +54,7 @@ function App() {
           <BrowserRouter>
             <div className="nav1 flex justify-between p-3">
                 <div className='nav3 flex justify-center items-center gap-1 font-bold text-2xl ml-7'>
-                  <img src="../public/images/logo2.jpeg" alt="logo" className='h-11 rounded-full'/>
+                  <img src={logo} alt="logo" className='h-11 rounded-full'/>
                   <h1>Hari</h1>
                 </div>
                 <div className='nav2' >
@@ -89,12 +96,12 @@ function App() {
                 <Route path='/weather' element={<WeatherDeatiles toogle={toogle}/>} />
                 <Route path='/currency' element={<Currency toogle={toogle}/>} />
                 <Route path='/certificate' element={<Certificate toogle={toogle}/>} />
-                <Route path='/python' element={<Python toogle={toogle}/>} />
-                <Route path='/javascript' element={<Javascript toogle={toogle}/>} />
-                <Route path='/fullwithpy' element={<FullSwithPy toogle={toogle}/>} />
-                <Route path='/geekjs' element={<Js2 toogle={toogle}/>} />
-                <Route path='/git' element={<Git toogle={toogle}/>} />
-                <Route path='/learntube' element={<Js3 toogle={toogle}/>} />
+                <Route path='/python' element={<Python python={python} toogle={toogle}/>} />
+                <Route path='/javascript' element={<Javascript guvi={guvi} toogle={toogle}/>} />
+                <Route path='/fullwithpy' element={<FullSwithPy guvifull={guvifull} toogle={toogle}/>} />
+                <Route path='/geekjs' element={<Js2 geekjs={geekjs} toogle={toogle}/>} />
+                <Route path='/git' element={<Git geek={geek} toogle={toogle}/>} />
+                <Route path='/learntube' element={<Js3 learntube={learntube} toogle={toogle}/>} />
                 <Route path='/contact' element={<Contact toogle={toogle}/>} />
             </Routes>
           </BrowserRouter>
